@@ -1,0 +1,8 @@
+train: S:\PycharmWorkspace\labelimg\new_file\train\images  # train images (relative to 'path') 128 images
+val: S:\PycharmWorkspace\labelimg\new_file\val\images  # val images (relative to 'path') 128 images
+
+# Classes num
+nc: 1
+
+# Classes name
+names: ['mecanum']
