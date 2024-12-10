@@ -1,0 +1,8 @@
+train: S:\PycharmWorkspace\labelimg\split_data_file\train\images
+val: S:\PycharmWorkspace\labelimg\split_data_file\val\images
+
+# Classes num
+nc: 1
+
+# Classes name
+names: ['rk3588']
