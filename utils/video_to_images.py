@@ -61,7 +61,7 @@ def extract_frames(video_path, output_dir, frame_interval=60):
 
 
 if __name__ == "__main__":
-    video_path = "../data/video/IMG_5001.mp4"  # 视频路径/文件名
+    video_path = "../data/video/IMG_5002.mp4"  # 视频路径/文件名
     output_dir = "../data/output_frames"  # 帧的输出目录
     frame_interval = 5  # 提取一张图片帧的帧间隔
 

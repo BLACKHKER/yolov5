@@ -82,7 +82,7 @@ def split_data(file_path, xml_path, new_file_path, train_rate, val_rate, test_ra
 
 
 if __name__ == '__main__':
-    file_path = r"D:\PycharmWorkspace\labelimg\JPEGImages"
-    txt_path = r'D:\PycharmWorkspace\labelimg\Annotations'
-    new_file_path = r"D:\PycharmWorkspace\labelimg\split_data_file"
+    file_path = r"S:\PycharmWorkspace\labelimg\JPEGImages"
+    txt_path = r'S:\PycharmWorkspace\labelimg\Annotations'
+    new_file_path = r"S:\PycharmWorkspace\labelimg\split_data_file"
     split_data(file_path, txt_path, new_file_path, train_rate=0.8, val_rate=0.2, test_rate=0.2)
