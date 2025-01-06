@@ -2,7 +2,7 @@
 @Author  ：Zhao
 @Date    ： 14:22
 @File    ：video_to_images.py
-@Description: t按帧提取视频保存为jpg图片，拍摄训练素材用
+@Description: t按帧提取拍摄的视频保存为jpg图片，用来制作训练素材
 @Version 1.0
 """
 
@@ -32,9 +32,8 @@ def extract_frames(video_path, output_dir, frame_interval=60):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # 遍历视频的帧
-    frame_number = 0
-    saved_frame_count = 0
+    frame_number = 0  # 遍历视频的帧
+    saved_frame_count = 0   # 已保存的帧图片
     while True:
         ret, frame = video.read()
 
@@ -61,7 +60,7 @@ def extract_frames(video_path, output_dir, frame_interval=60):
 
 
 if __name__ == "__main__":
-    video_path = "../data/video/IMG_5002.mp4"  # 视频路径/文件名
+    video_path = "../data/video/b.mp4"  # 视频路径/文件名
     output_dir = "../data/output_frames"  # 帧的输出目录
     frame_interval = 5  # 提取一张图片帧的帧间隔
 
