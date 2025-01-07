@@ -377,7 +377,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                     'updates': ema.updates,
                     'optimizer': optimizer.state_dict(),
                     'opt': vars(opt),
-                    'git': GIT_INFO,  # {remote, branch, commit} if a git repo
+                    # 'git': GIT_INFO,  # {remote, branch, commit} if a git repo
                     'date': datetime.now().isoformat()}
 
                 # Save last, best and delete
@@ -438,7 +438,7 @@ def parse_opt(known=False):
     parser.add_argument('--hyp', type=str, default=ROOT / 'data/hyps/hyp.scratch-low.yaml', help='hyperparameters path')
     parser.add_argument('--epochs', type=int, default=500, help='total training epochs')
     parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs, -1 for autobatch')
-    parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=880, help='train, val image size (pixels)')
+    parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=896, help='train, val image size (pixels)')
     parser.add_argument('--rect', action='store_true', help='rectangular training')
     parser.add_argument('--resume', nargs='?', const=True, default=False, help='resume most recent training')
     parser.add_argument('--nosave', action='store_true', help='only save final checkpoint')
