@@ -4,6 +4,11 @@
 # conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 # conda install matplotlib numpy opencv pillow psutil PyYAML requests scipy tqdm pandas seaborn setuptools ipython ultralytics
 # pip install thop
+#
+# Export:
+# conda install onnx protobuf onnxconverter-common
+# pip install onnx-simplifier
+
 
 # Base ------------------------------------------------------------------------
 gitpython>=3.1.30
