@@ -53,7 +53,7 @@ class Detect(nn.Module):
         self.m = nn.ModuleList(nn.Conv2d(x, self.no * self.na, 1) for x in ch)  # output conv
         self.inplace = inplace  # use inplace ops (e.g. slice assignment)
 
-    """
+
     def forward(self, x):
         z = []  # inference output
         for i in range(self.nl):
@@ -78,23 +78,15 @@ class Detect(nn.Module):
                 z.append(y.view(bs, self.na * nx * ny, self.no))
 
         return x if self.training else (torch.cat(z, 1),) if self.export else (torch.cat(z, 1), x)
+
     """
-
     def forward(self, x):
-        """onnx export
-
-        Args:
-            self:
-            x:
-
-        Returns:
-
-        """
         z = []  # inference output
         for i in range(self.nl):
             z.append(torch.sigmoid(self.m[i](x[i])))
 
         return z
+    """
 
     def _make_grid(self, nx=20, ny=20, i=0, torch_1_10=check_version(torch.__version__, '1.10.0')):
         d = self.anchors[i].device
