@@ -78,8 +78,9 @@ class Detect(nn.Module):
                 z.append(y.view(bs, self.na * nx * ny, self.no))
 
         return x if self.training else (torch.cat(z, 1),) if self.export else (torch.cat(z, 1), x)
-
+    
     """
+    # export onnx to open
     def forward(self, x):
         z = []  # inference output
         for i in range(self.nl):
